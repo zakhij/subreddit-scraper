@@ -40,13 +40,14 @@ to log in and register an application and grab credentials.
     source venv/bin/activate  # On Windows use `venv\Scripts\activate`
     ```
 
-3. **Install Dependencies using Poetry**
+3. **Set up Dependencies & Scripts using Poetry**
     ```bash
     pip install poetry
     poetry install
     ```
 
 4. **Configure Environment Variables**
+    
     You must configure a .env file in the root of this project:
 
     ```
@@ -60,9 +61,10 @@ to log in and register an application and grab credentials.
     DB_NAME=SubredditScraperDatabase
     ```
 5. **Set up the Database**
+    
     Run the provided database setup script to create the necessary tables:
     ```bash
-    poetry setup-database
+    setup-database
     ```
 
 
@@ -74,7 +76,7 @@ To execute this script, pass through command line arguments to the file. The arg
 
 For example:
 ```bash
-poetry subreddit-scraper --looback_date=2024-08-18 --subreddit=dataisbeautiful
+subreddit-scraper --looback_date=2024-08-18 --subreddit=dataisbeautiful
 ```
 
 ### Ingesting Data
