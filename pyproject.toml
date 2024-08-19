@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "subreddit-scraper"
+version = "0.1.0"
+description = ""
+authors = ["Zakaria Hijaouy <zakhijaouy@gmail.com>"]
+readme = "README.md"
+packages = [{include = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+praw = "^7.7.1"
+PyMySQL = "^1.1.1"
+python-dotenv = "^1.0.1"
+rich = "^13.7.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+subreddit-scraper = "src.main:main"
+setup-database= "src.setup_db:main"
